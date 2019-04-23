@@ -1,0 +1,63 @@
+*.class
+
+# Package Files #
+*.war
+*.orig
+*.ear
+.gitignore.swp
+
+#VS Code files
+.vscode
+.project
+
+# IDEA Files
+*.iml
+.idea
+
+/**/.settings
+/**/.externalToolBuilders
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+#general files in all extensions
+/**/extensioninfo.xsd
+/**/build.xml
+/**/gensrc
+/**/classes
+/**/eclipsebin
+/**/addons/*
+/**/addonsrc/*
+/**/commonwebsrc/*
+*-testclasses.xml
+*-webtestclasses.xml
+hmc.xsd
+beans.xsd
+items.xsd
+rebel.xml
+platformhome.properties
+/**/node_modules/
+npm-debug.log
+velocity.log
+
+**/_ui/responsive/theme-blue/css/*
+**/_ui/responsive/theme-blue/fonts/*
+**/_ui/responsive/common/js/*
+**/_ui/responsive/common/css/**/*
+**/_ui/responsive/common/bootstrap/*
+**/_ui/responsive/common/images/icons.svg
+
+**/web/webroot/WEB-INF/messages/theme-alpha*
+**/trainingcore/lib/*
+**/trainingfacades/lib
+!**/trainingfacades/lib/user-agent-detector.jar
+
+/**/*_bof.jar
+**/.lastupdate
+
+**/trainingstorefront/resources/wro_addons.xml
+
+**/trainingstorefront/web/webroot/cmscockpit/*
+**/trainingstorefront/web/webroot/cockpit/*
+
+**/dataload/hmc/bin/*

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2018 SAP SE or an SAP affiliate company.  All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="beans.xsd">
+
+	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
+		<property name="genders" type="java.util.List&lt;org.training.facades.product.data.GenderData>"/>
+		 <property name="alias" type="String"/>
+		 <property name="onlineDays" type="int"></property>
+	</bean>
+
+	<bean class="org.training.facades.product.data.GenderData">
+		<property name="code" type="String"/>
+		<property name="name" type="String"/>
+	</bean>
+	
+	  <!-- Additional nickname and workofficeAddress property for CustomerData -->
+	  
+	  <bean class="de.hybris.platform.commercefacades.user.data.SocialProfileData">
+		<property name="facebookprofile" type="String"/>
+		<property name="twitterprofile" type="String"/>
+		<property name="instagramprofile" type="String"/>
+		
+	</bean>
+	  
+    <bean class="de.hybris.platform.commercefacades.user.data.CustomerData" extends="de.hybris.platform.commercefacades.user.data.PrincipalData">
+        <property name="nickname" type="String" />
+        <property name="workOfficeAddress" type="de.hybris.platform.commercefacades.user.data.AddressData"/>
+        <property name="socialProfile" type="de.hybris.platform.commercefacades.user.data.SocialProfileData"/>
+    </bean>
+	
+</beans>
