@@ -560,5 +560,9 @@
 	<bean id="rangedAvgCustomerRatingProvider"
 		class="org.training.core.search.solrfacetsearch.provider.impl.TrainingProductReviewAverageRatingValueProvider"
 		parent="productReviewAverageRatingValueProvider" />
+		
+	<alias name="customCommerceSearchSolrQueryPopulator" alias="commerceSearchSolrQueryPopulator"/>
+	<bean id="customCommerceSearchSolrQueryPopulator" class="org.training.core.search.populator.CustomCommerceSearchSolrQueryPopulator" parent="defaultCommerceSearchSolrQueryPopulator">
+	</bean>
 	
 </beans>
