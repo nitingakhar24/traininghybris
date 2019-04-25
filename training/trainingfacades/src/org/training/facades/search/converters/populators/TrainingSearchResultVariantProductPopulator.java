@@ -22,7 +22,11 @@ public class TrainingSearchResultVariantProductPopulator extends SearchResultVar
 		{
 			target.setOnlineDays(0);
 		}
-
+		final Object unitObj = this.getValue(source, "unit_string");
+		if (unitObj != null)
+		{
+			target.setUnit(this.<String> getValue(source, "unit_string").toString());
+		}
 
 	}
 }

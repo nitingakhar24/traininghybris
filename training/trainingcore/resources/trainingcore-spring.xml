@@ -564,5 +564,7 @@
 	<alias name="customCommerceSearchSolrQueryPopulator" alias="commerceSearchSolrQueryPopulator"/>
 	<bean id="customCommerceSearchSolrQueryPopulator" class="org.training.core.search.populator.CustomCommerceSearchSolrQueryPopulator" parent="defaultCommerceSearchSolrQueryPopulator">
 	</bean>
+
+	<bean id="trainingProductUnitValueResolver" class="org.training.core.search.solrfacetsearch.provider.impl.TrainingProductUnitValueResolver" parent="abstractValueResolver" />
 	
 </beans>

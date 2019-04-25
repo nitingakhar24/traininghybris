@@ -36,5 +36,9 @@
         <property name="workOfficeAddress" type="de.hybris.platform.commercefacades.user.data.AddressData"/>
         <property name="socialProfile" type="de.hybris.platform.commercefacades.user.data.SocialProfileData"/>
     </bean>
+    
+    <bean class="de.hybris.platform.commercefacades.product.data.ProductData">
+        <property name="unit" type="String"/>
+	</bean>
 	
 </beans>
