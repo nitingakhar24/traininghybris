@@ -11,6 +11,7 @@ import de.hybris.platform.solrfacetsearch.provider.impl.AbstractValueResolver;
 
 import java.util.Collection;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -22,6 +23,8 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class TrainingProductUnitValueResolver extends AbstractValueResolver<ProductModel, Object, Object>
 {
+	private static final Logger LOG = Logger.getLogger(TrainingProductUnitValueResolver.class);
+
 	@Autowired
 	private FieldNameProvider fieldNameProvider;
 	@Autowired
@@ -32,8 +35,8 @@ public class TrainingProductUnitValueResolver extends AbstractValueResolver<Prod
 			final IndexedProperty indexedProperty, final ProductModel productModel,
 			final ValueResolverContext<Object, Object> valueResolverContext) throws FieldValueProviderException
 	{
-
 		final String unitName = getUnitName(productModel);
+		LOG.info(unitName);
 
 		if (unitName != null)
 		{
