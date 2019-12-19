@@ -64,6 +64,7 @@ public class ExtendedCustomerController extends BaseCommerceController
 	public String getCustomerNickName(
 			@ApiParam(value = "Response configuration. This is the list of fields that should be returned in the response body.", allowableValues = "BASIC, DEFAULT, FULL") @PathVariable final String userId)
 	{
+		LOG.info("User ID" + userId);
 		final String userName = customerFacade.getUserForUID(userId).getNickname();
 		return userName;
 	}
